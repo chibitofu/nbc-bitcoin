@@ -1,0 +1,22 @@
+{
+  "name": "nbc-bitcoin",
+  "version": "1.0.0",
+  "description": "Display for bitcoin inofrmation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chibitofu/nbc-bitcoin.git"
+  },
+  "author": "Erin Moon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chibitofu/nbc-bitcoin/issues"
+  },
+  "homepage": "https://github.com/chibitofu/nbc-bitcoin#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
