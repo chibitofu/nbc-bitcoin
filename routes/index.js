@@ -41,9 +41,9 @@ function organizeData(data) {
 function formatPrice(current, last) {
     const difference = current - last;
     const change = (() => { 
-      if (current > last) {
+      if (current < last) {
         return 'down';
-      } else if (current < last) {
+      } else if (current > last) {
         return 'up';
       } else {
         return 'same';

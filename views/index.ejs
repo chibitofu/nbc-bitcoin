@@ -5,6 +5,7 @@
 
   <head>
     <title>Express</title>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="public/stylesheets/style.css">
   </head>
 
@@ -23,7 +24,17 @@
           <tr id="bct-row">
             <td><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
             <td><%= listing.price.price %></td>
-            <td class="bct-direction"><%= (idx !==0) ? listing.price.direction : 'NA' %></td>
+            <td class="bct-direction">
+              <% if (idx === 0) { %>
+                <%= 'NA' %>
+              <% } else if (listing.price.direction === 'up') { %> 
+                <i class="fas fa-arrow-alt-circle-up"></i>
+              <% } else if (listing.price.direction === 'down'){ %>
+                <i class="fas fa-arrow-alt-circle-down"></i>
+              <% } else { %>
+                <i class="fas fa-equals"></i>
+              <% } %>
+            </td>
             <td class="bct-change 
               <% if (listing.price.change < 0 && idx !== 0) { %>
                 <%= "bct-down" %>

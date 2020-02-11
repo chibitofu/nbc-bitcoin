@@ -59,3 +59,13 @@ table #bct-row td {
 .bct-up {
   color: rgb(71, 154, 71);
 }
+
+.fa-arrow-alt-circle-up {
+  color: rgb(51, 130, 191);
+  font-size: 22px;
+}
+
+.fa-arrow-alt-circle-down {
+  color: rgb(247, 159, 65);
+  font-size: 22px;
+}
