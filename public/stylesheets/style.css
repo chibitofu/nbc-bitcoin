@@ -12,9 +12,8 @@ body {
   box-shadow: 2px 2px 8px 2px grey;
 }
 
-
 #bct tr:nth-child(even){
-  background-color: lightsteelblue;
+  background-color: papayawhip;
 }
 
 th {
@@ -32,10 +31,8 @@ tr .bct-day.title {
   border-radius: 0 10px 0 0;
 }
 
-tr .bct-direction, tr .bct-day, tr .bct-change {
-  text-align: center;
-}
-
 table #bct-row td {
+  border-bottom: 1px solid #ddd;
   padding: 10px 5px 10px 5px;
+  text-align: center;
 }
