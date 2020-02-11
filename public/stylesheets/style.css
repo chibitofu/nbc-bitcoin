@@ -1,28 +1,21 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 2rem;
+  font: 0.75rem "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color:whitesmoke;
 }
 
 #main-table {
   background-color: white;
-  padding: 40px;
+  padding: 3rem;
   box-shadow: 2px 2px 8px 2px grey;
+  width: 85%;
 }
 
 #bct {
   background-color: white;
-  border-radius: 10px 10px 0 0;
   border-collapse: collapse;
   width: 100%;
 }
-
-
-/* 
-#bct tr:nth-child(even){
-  background-color: papayawhip;
-}
-*/
 
 #bct tr:hover {
   background-color: #c4d3dc;
@@ -36,15 +29,6 @@ th {
   font-size: 18px;
   background-color: white;
 }
-
-/* 
-tr .bct-date.title {
-  border-radius: 10px 0 0 0 ;
-}
-
-tr .bct-day.title {
-  border-radius: 0 10px 0 0;
-} */
 
 table #bct-row td {
   border-bottom: 1px solid #ddd;
@@ -72,4 +56,37 @@ table #bct-row td {
 
 .fa-coins {
   color: rgb(255, 196, 0);
+}
+
+@media (max-width: 620px) {
+  body {
+    padding: 0;
+    font: 8px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color:white;
+  }
+
+  #main-table {
+    background-color: white;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  th {
+    padding: 0 0 5px 0;
+    text-align: center;
+    color: rgb(50, 121, 191);
+    font-size: 10px;
+    background-color: white;
+  }
+
+  table #bct-row td {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .fa-arrow-alt-circle-up, .fa-arrow-alt-circle-down {
+    font-size: 8px;
+  }
 }
