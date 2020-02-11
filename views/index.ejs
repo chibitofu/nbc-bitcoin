@@ -12,9 +12,13 @@
     <h1>Express</h1>
     <div id="display-table">
       <table>
-        <% data.forEach(listing => { %>
+        <% filteredData.forEach((listing, idx) => { %>
           <tr>
-            <td><%= listing.price %> <%= listing.timestamp %></td>
+            <td class="price"><%= listing.price.price %></td>
+            <td class="price"><%= (idx !== 0) ? listing.price.change : 'NA' %></td>
+            <td class="price"><%= (idx !==0) ? listing.price.direction : 'NA' %></td>
+            <td class="date"><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
+            <td class="day"><%= `${listing.date.day}`%></td>
           </tr>
         <% }); %>
       </table>
