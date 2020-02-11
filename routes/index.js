@@ -11,7 +11,6 @@ router.get('/', function(req, res) {
     const filteredData = organizeData(data);
     res.render('index', { filteredData });
   })
-  
 });
 
 // Takes information from api and extrapolates data to send to view.
@@ -26,6 +25,7 @@ function organizeData(data) {
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
+    // Checks if it's the first entry of the day time 00:00:00
     if (hours + minutes + seconds === 0) {
       const currentPrice = entry.price;
       const lastPrice = i > 0 ? data[i - 1].price : 0;

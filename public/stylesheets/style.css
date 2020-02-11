@@ -1,9 +1,41 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:whitesmoke;
 }
 
-p {
-  color: orange;
-  font-size: 32px;
+#bct {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 2px 2px 8px 2px grey;
+}
+
+
+#bct tr:nth-child(even){
+  background-color: lightsteelblue;
+}
+
+th {
+  padding: 12px 6px 12px 6px;
+  text-align: center;
+  background-color: royalblue;
+  color: white;
+}
+
+tr .bct-date.title {
+  border-radius: 10px 0 0 0 ;
+}
+
+tr .bct-day.title {
+  border-radius: 0 10px 0 0;
+}
+
+tr .bct-direction, tr .bct-day, tr .bct-change {
+  text-align: center;
+}
+
+table #bct-row td {
+  padding: 10px 5px 10px 5px;
 }

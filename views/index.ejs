@@ -10,15 +10,22 @@
 
   <body>
     <h1>Express</h1>
-    <div id="display-table">
-      <table>
+    <div id="main-table">
+      <table id="bct">
+        <tr id="bct-title">
+          <th class="bct-date title">Date</th>
+          <th class="bct-price title">Price</th>
+          <th class="bct-direction title">Direction</th>
+          <th class="bct-change title">Change</th>
+          <th class="bct-day title">Day</th>
+        </tr>
         <% filteredData.forEach((listing, idx) => { %>
-          <tr>
-            <td class="price"><%= listing.price.price %></td>
-            <td class="price"><%= (idx !== 0) ? listing.price.change : 'NA' %></td>
-            <td class="price"><%= (idx !==0) ? listing.price.direction : 'NA' %></td>
-            <td class="date"><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
-            <td class="day"><%= `${listing.date.day}`%></td>
+          <tr id="bct-row">
+            <td><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
+            <td><%= listing.price.price %></td>
+            <td class="bct-direction"><%= (idx !==0) ? listing.price.direction : 'NA' %></td>
+            <td class="bct-change"><%= (idx !== 0) ? listing.price.change : 'NA' %></td>
+            <td class="bct-day"><%= `${listing.date.day}`%></td>
           </tr>
         <% }); %>
       </table>
