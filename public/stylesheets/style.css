@@ -32,7 +32,7 @@ body {
 th {
   padding: 12px 6px 12px 6px;
   text-align: center;
-  color: slategrey;
+  color: rgb(50, 121, 191);
   font-size: 18px;
   background-color: white;
 }
@@ -68,4 +68,8 @@ table #bct-row td {
 .fa-arrow-alt-circle-down {
   color: rgb(247, 159, 65);
   font-size: 22px;
+}
+
+.fa-coins {
+  color: rgb(255, 196, 0);
 }
