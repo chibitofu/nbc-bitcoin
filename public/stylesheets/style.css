@@ -4,35 +4,58 @@ body {
   background-color:whitesmoke;
 }
 
+#main-table {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 2px 2px 8px 2px grey;
+}
+
 #bct {
   background-color: white;
   border-radius: 10px 10px 0 0;
   border-collapse: collapse;
   width: 100%;
-  box-shadow: 2px 2px 8px 2px grey;
 }
 
+
+/* 
 #bct tr:nth-child(even){
   background-color: papayawhip;
+}
+*/
+
+#bct tr:hover {
+  background-color: #c4d3dc;
+  color: white;
 }
 
 th {
   padding: 12px 6px 12px 6px;
   text-align: center;
-  background-color: royalblue;
-  color: white;
+  color: slategrey;
+  font-size: 18px;
+  background-color: white;
 }
 
+/* 
 tr .bct-date.title {
   border-radius: 10px 0 0 0 ;
 }
 
 tr .bct-day.title {
   border-radius: 0 10px 0 0;
-}
+} */
 
 table #bct-row td {
   border-bottom: 1px solid #ddd;
   padding: 10px 5px 10px 5px;
   text-align: center;
+}
+
+.bct-down {
+  color: rgb(205, 46, 46);
+}
+
+.bct-up {
+  color: rgb(71, 154, 71);
 }

@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <h1>NBC Bitcoin</h1>
     <div id="main-table">
+      <h1>NBC Bitcoin</h1>
       <table id="bct">
         <tr id="bct-title">
           <th class="bct-date title">Date</th>
@@ -24,7 +24,14 @@
             <td><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
             <td><%= listing.price.price %></td>
             <td class="bct-direction"><%= (idx !==0) ? listing.price.direction : 'NA' %></td>
-            <td class="bct-change"><%= (idx !== 0) ? listing.price.change : 'NA' %></td>
+            <td class="bct-change 
+              <% if (listing.price.change < 0 && idx !== 0) { %>
+                <%= "bct-down" %>
+              <% } else if (listing.price.change > 0 && idx !== 0) { %>
+                <%= "bct-up" %>
+              <% } %>
+            ">
+              <%= (idx !== 0) ? listing.price.change : 'NA' %></td>
             <td class="bct-day"><%= `${listing.date.day}`%></td>
           </tr>
         <% }); %>
