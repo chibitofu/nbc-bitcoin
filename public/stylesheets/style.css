@@ -17,6 +17,10 @@ body {
   width: 100%;
 }
 
+#bct tr:nth-child(even) {
+  background-color: rgb(244, 244, 244);
+}
+
 #bct tr:hover {
   background-color: #c4d3dc;
   color: white;
