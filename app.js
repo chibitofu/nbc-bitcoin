@@ -13,6 +13,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', indexRouter);
+app.use((req, res) => {
+
+    res.status(404).render('not-found');
+  })
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);

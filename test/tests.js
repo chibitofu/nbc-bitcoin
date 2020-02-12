@@ -1,6 +1,7 @@
 const assert = require('assert');
 const index = require('../routes/index.js');
 
+// Tests for index.js in routes.
 describe('format price', () => {
     describe('direction up', () => {
         it('should return up because 200 - 100 = 100', () => {

@@ -58,6 +58,17 @@ table #bct-row td {
   color: rgb(255, 196, 0);
 }
 
+/* 404 page */
+#not-found {
+  padding: 0;
+}
+
+#not-found img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive for phones */
 @media (max-width: 620px) {
   body {
     padding: 0;
