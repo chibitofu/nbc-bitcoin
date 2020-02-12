@@ -23,7 +23,7 @@
         </tr>
         <% filteredData.forEach((listing, idx) => { %>
           <tr id="bct-row">
-            <td><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}` %></td>
+            <td><%= `${listing.date.year}-${listing.date.month}-${listing.date.date}T00:00:00` %></td>
             <td><%= listing.price.price %></td>
             <td class="bct-direction">
               <% if (idx === 0) { %>
@@ -49,6 +49,7 @@
         <% }); %>
       </table>
     </div>
+    <footer>©Erin Moon 2020</footer>
     <script src="public/javascripts/script.js"></script>
   </body>
 
