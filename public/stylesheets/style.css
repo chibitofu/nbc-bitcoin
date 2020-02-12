@@ -97,6 +97,11 @@ footer {
     background-color: white;
   }
 
+  #bct tr:hover {
+    background-color: white;
+    color: black;
+  }
+  
   table #bct-row td {
     border-bottom: 1px solid #ddd;
     padding: 5px;
