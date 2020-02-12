@@ -17,3 +17,5 @@
  - *Change*  - is the difference between previous day and current day price. First entry is 'NA'.
  - *Direction*  - is either up, down, or same. Calculated from change. First entry is 'NA'.
  - *Price* - is the value of the bitcoin at the start of the day timecode 00:00:00.
+ - Run tests using using moch with `npm test`. 
+
