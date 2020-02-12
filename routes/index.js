@@ -39,6 +39,14 @@ function organizeData(data) {
 };
 
 function formatPrice(current, last) {
+    if (!current) { 
+      current = 0;
+    }
+
+    if (!last) {
+      last = 0;
+    }
+
     const difference = current - last;
     const change = (() => { 
       if (current < last) {
@@ -60,6 +68,16 @@ function formatPrice(current, last) {
 }
 
 function formatDate(dateTime) {
+  if (!dateTime) {
+    dateTime = new Date();
+  }
+
+  const getDayString = (dayInt) => {
+    const dayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+    return dayArr[dayInt];
+  };
+
   const dateString = ('0' + dateTime.getDate()).slice(-2);
   const monthString = ('0' + (dateTime.getMonth() + 1)).slice(-2);
   const dayString = getDayString(dateTime.getDay());
@@ -75,10 +93,9 @@ function formatDate(dateTime) {
   return dateObj;
 };
 
-function getDayString(dayInt) {
- const dayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
- return dayArr[dayInt];
-};
 
-module.exports = router;
+exports.router = router;
+exports.formatPrice = formatPrice;
+exports.formatDate = formatDate;
+
