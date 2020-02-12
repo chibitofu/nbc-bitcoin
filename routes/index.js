@@ -93,8 +93,6 @@ function formatDate(dateTime) {
   return dateObj;
 };
 
-
-
 module.exports = router;
 module.exports.formatDate = formatDate;
 module.exports.formatPrice = formatPrice;
