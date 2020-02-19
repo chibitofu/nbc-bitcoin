@@ -1,21 +1,42 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const request = require('request');
 
 // GET home page.
 router.get('/', function(req, res) {
-  fs.readFile('public/data.json', (err, data) => {
-    if (err) throw err;
-    data = JSON.parse(data);
-    data = data.data.history;
-    const filteredData = organizeData(data);
+  let promise = new Promise((resolve, reject) => {
+    request.get('https://api.coinranking.com/v1/public/coin/1/history/30d', (err, response, body) => {
+      if (err || response.statusCode !== 200) {
+        reject(err)
+      }
+
+      try {
+        const data = JSON.parse(body).data.history;
+        const filteredData = organizeData(data);
+        resolve(filteredData)
+      } catch (error) {
+        res.send(`${error.name}: ${error.message}`);
+      } 
+
+    });
+  });
+
+  promise.then((filteredData) => {
     res.render('index', { filteredData });
-  })
+  }).catch((err) => {
+    res.send(`${err.name}: ${err.message}`);
+  });
 });
 
 // Takes information from api and extrapolates data to send to view.
 // Date (yyyy,MM,dd), Price, Difference (from previous day), Change (up, down, same), Day of Week.
 function organizeData(data) {
+  if (!Array.isArray(data)) {
+    const err = new TypeError('data must be an array');
+    console.log(`${err.name}: ${err.message}`);
+  }
+
   const filteredDate = [];
   for (let i = 0; i < data.length; i++) {
     const entry = data[i];
