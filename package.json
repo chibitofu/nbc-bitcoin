@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-free": "^5.12.1",
     "debug": "~2.6.9",
     "ejs": "^3.0.1",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "mocha": "^7.0.1",
     "request": "^2.88.2"
   }
